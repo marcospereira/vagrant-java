@@ -5,7 +5,7 @@ Vagrant.configure("2") do |config|
 
   [8, 9].each do |java_version|
 
-    config.vm.define "java-#{java_version}" do |vh|
+    config.vm.define "java#{java_version}" do |vh|
       vh.vm.box = "ubuntu/xenial64"
 
       # Because I use these VMs when testing play stuff
