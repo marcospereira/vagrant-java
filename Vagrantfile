@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
 
       vh.vm.provision "shell", inline: <<-SHELL
         apt-get update
-        apt-get install -y vim git git-core lynx
+        apt-get install -y vim git git-core lynx unzip htop
         # Add Java PPA
         add-apt-repository ppa:webupd8team/java -y
         apt-get update
