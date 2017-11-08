@@ -27,6 +27,7 @@ Vagrant.configure("2") do |config|
         # Install Java
         apt-get install oracle-java#{java_version}-installer oracle-java#{java_version}-set-default -y
         # Install sbt
+        apt-get install bc # see https://github.com/sbt/sbt/issues/3697
         echo "deb https://dl.bintray.com/sbt/debian /" | tee -a /etc/apt/sources.list.d/sbt.list
         apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B84B2DF73499E82A75642AC823
         apt-get update
